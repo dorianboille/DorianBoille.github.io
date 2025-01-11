@@ -3,11 +3,11 @@ import { Project } from '../types';
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'The Simple Sudoku',
-    description: 'Une application IOS et Android de sudoku.',
-    image: 'https://dorianboille.github.io/images/sudoku.png',
-    techStack: ['Flutter', 'Figma'],
-    category: 'Application Mobile',
+    title: 'AI Image Recognition System',
+    description: 'Deep learning model for real-time image classification using TensorFlow and PyTorch, achieving 98% accuracy on benchmark datasets.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
+    techStack: ['Python', 'TensorFlow', 'PyTorch', 'Docker'],
+    category: 'Computer Vision',
     link: 'https://github.com/example/ai-vision'
   },
   {

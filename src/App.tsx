@@ -25,7 +25,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <Brain className="w-8 h-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900">Portfolio de Dorian BOILLE</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Portfolio IA</h1>
             </div>
           </div>
         </div>
@@ -38,8 +38,9 @@ function App() {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Ingénieur en Intelligence Artificielle
           </h2>
-          <p className="text-xl text-gray-600 max-w-7xl mx-auto px-4 text-left">
-          Ingénieur spécialisé en Python, Intelligence Artificielle, et Data Engineering, je maîtrise ces domaines tout en nourrissant une passion pour l'exploration de nouveaux horizons. En dehors de mes engagements professionnels, je consacre mon temps libre à des projets variés, reflétant ma capacité à relever des défis divers et apporter une perspective unique. Mon expertise couvre toutes les étapes d'un projet, de sa conception à son achèvement, en optimisant coûts et efficacité.
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Spécialisé dans le développement de solutions d'IA innovantes,
+            combinant expertise technique et vision stratégique.
           </p>
         </div>
 

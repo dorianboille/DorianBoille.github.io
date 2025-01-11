@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Link } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-600"
             >
-              <Link className="w-5 h-5" />
+              <Github className="w-5 h-5" />
             </a>
           )}
         </div>
