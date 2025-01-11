@@ -1,82 +1,13 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Dorian Boille Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
-
-<!-- Wrapper -->
-<div id="wrapper" class="divided">
-
-    <!-- One -->
-    <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-		<div class="content">
-			<h1>Dorian Boille</h1>
-			<p class="major">En tant qu'ingénieur spécialisé en Python, Intelligence Artificielle, et Data Engineering, je possède une solide expertise dans ces domaines. Cependant, ce qui me distingue, c'est ma passion pour l'exploration de nouveaux horizons. En dehors de mes engagements professionnels, mon temps libre est dédié à la réalisation de projets variés, couvrant un large éventail de sujets. Mon portfolio reflète cette diversité, témoignant de ma capacité à aborder avec succès des défis variés et à apporter une perspective unique à chaque projet. J'ai acquis la compétence essentielle de mener à bien un projet de A à Z, en optimisant les coûts et en assurant une efficacité maximale à chaque étape du processus.</p>
-			<ul class="actions stacked">
-				<li><a href="#quiz-general" class="button big wide smooth-scroll-middle">Get Started</a></li>
-			</ul>
-		</div>
-	</section>
-
-    <!-- Function to generate sections -->
-    <script>
-        function generateSection(orientation, title, description, imageSrc, sectionId) {
-            document.write(`
-                <section class="spotlight style1 orient-${orientation} content-align-left image-position-center onscroll-image-fade-in" id="${sectionId}">
-                    <div class="content">
-                        <h2>${title}</h2>
-                        <p>${description}</p>
-                    </div>
-                    <div class="image">
-                        <img src="${imageSrc}" alt="" />
-                    </div>
-                </section>
-            `);
-        }
-    </script>
-
-    <script>
-        generateSection('right', 'Quiz General', 'Ma dernière réalisation est un quiz disponible sur Android et iOS, conçu avec Flutter et Firebase. J\'ai élaboré l\'interface utilisateur et l\'expérience utilisateur avec Figma. Cette application enregistre plus de 100 téléchargements par jour.', 'images/spotlight01.jpg', 'quiz-general');
-    </script>
-
-    <script>
-        generateSection('left', 'Hum me', 'Le soir, pendant mes études d\'ingénieur, j\'ai développé une application novatrice visant à aider les utilisateurs à identifier la musique qu\'ils ont en tête. Cette application prend la forme d\'un réseau social/forum. J\'ai utilisé <strong>Android Studio</strong> pour la programmation de l\'application et <strong>Firebase</strong> pour la gestion de la base de données. Entre mai 2021 et mai 2022, l\'application a été téléchargée plus de <strong>50 000 fois</strong>, obtenant une note de <strong>3,85/5</strong> en mars 2022. Plus de <strong>7 000 chansons</strong> ont été partagées sur l\'application, contribuant à son succès. Malheureusement, en raison des évolutions réglementaires de Google Play et de la sortie d\'un outil similaire par Google basé sur l\'intelligence artificielle, j\'ai progressivement mis ce projet de côté.', 'images/humme.jpg', 'hum-me');
-    </script>
-
-    <script>
-        generateSection('right', 'Mes autres Quiz', 'Avec mon entreprise BQM Studio, j\'ai développé une vingtaine de quiz couvrant divers thèmes, rassemblant une communauté de plus de 80 000 utilisateurs mensuels. Ces projets ont été réalisés en utilisant Flutter et Firebase, tandis que l\'interface utilisateur et l\'expérience utilisateur ont été soigneusement élaborées avec Figma.', 'images/quiz.png', 'mes-autres-quiz');
-    </script>
-
-	<script>
-		generateSection('left', 'Logiciel Comptable sur Google Sheet', 'En tant que président d\'une SAS, que je partage avec deux amis, j\'ai créé un système de comptabilité en utilisant Google Sheet et son language de programmation <strong>Apps Script</strong>. L\'objectif était de simplifier nos processus financiers, et ainsi, à partir du Livre-Journal, j\'ai automatisé la génération du Grand-Livre, de la Balance, du Compte de Résultat, ainsi que du Bilan. Cette initiative a non seulement optimisé la gestion comptable de notre entreprise, mais elle a également permis d\'obtenir une vision transparente et précise de ses performances.', 'images/compta.jpg', 'logiciel-comptable');
-	</script>
-
-	<script>
-		generateSection('right', 'Design d\'intérieur', '', 'images/inter.png', 'logiciel-comptable');
-	</script>
-
-	<script>
-		generateSection('left', 'Modélisation 3D', 'Création d\'une collection de 1000 images 3D', 'images/octopium.jpg', 'octopium');
-	</script>
-
-
-
-
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
