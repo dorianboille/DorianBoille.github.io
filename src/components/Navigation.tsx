@@ -1,8 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Briefcase, FolderGit2, GraduationCap } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
+  const location = useLocation();
+  console.log('Navigation - Current location:', location.pathname);
+
   const navItems = [
     { to: '/projets-personnels', icon: FolderGit2, label: 'Projets Personnels' },
     { to: '/projets-professionnels', icon: Briefcase, label: 'Projets Professionnels' },
@@ -14,22 +17,26 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex space-x-8">
-            {navItems.map(({ to, icon: Icon, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                className={({ isActive }) =>
-                  `flex items-center px-3 py-2 text-sm font-medium ${
-                    isActive
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-500 hover:text-gray-700'
-                  }`
-                }
-              >
-                <Icon className="w-5 h-5 mr-2" />
-                {label}
-              </NavLink>
-            ))}
+            {navItems.map(({ to, icon: Icon, label }) => {
+              console.log('Rendering nav item:', to, 'isActive:', location.pathname === to);
+              return (
+                <NavLink
+                  key={to}
+                  to={to}
+                  className={({ isActive }) => {
+                    console.log('NavLink state:', to, isActive);
+                    return `flex items-center px-3 py-2 text-sm font-medium ${
+                      isActive
+                        ? 'text-blue-600 border-b-2 border-blue-600'
+                        : 'text-gray-500 hover:text-gray-700'
+                    }`;
+                  }}
+                >
+                  <Icon className="w-5 h-5 mr-2" />
+                  {label}
+                </NavLink>
+              );
+            })}
           </div>
         </div>
       </div>

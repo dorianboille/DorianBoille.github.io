@@ -1,17 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { PersonalProjects } from './pages/PersonalProjects';
 import { ProfessionalProjects } from './pages/ProfessionalProjects';
 import { Education } from './pages/Education';
 
+// Composant pour logger les changements de route
+const RouteLogger = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    console.log('Current pathname:', location.pathname);
+    console.log('Current search:', location.search);
+    console.log('Current hash:', location.hash);
+  }, [location]);
+  
+  return null;
+};
+
 function App() {
-  // Utilisez le basename pour correspondre à la base URL de Vite
   const basename = import.meta.env.BASE_URL;
+  console.log('BASE_URL:', basename);
+  console.log('Full URL:', window.location.href);
+  console.log('Environment:', import.meta.env.MODE);
 
   return (
     <Router basename={basename}>
       <div className="min-h-screen bg-gray-50">
+        <RouteLogger />
         <Navigation />
         <main className="container mx-auto py-6">
           <Routes>
