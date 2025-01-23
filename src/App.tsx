@@ -6,11 +6,14 @@ import { ProfessionalProjects } from './pages/ProfessionalProjects';
 import { Education } from './pages/Education';
 
 function App() {
+  // Utilisez le basename pour correspondre à la base URL de Vite
+  const basename = import.meta.env.BASE_URL;
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen bg-gray-50">
         <Navigation />
-        <main className="py-6">
+        <main className="container mx-auto py-6">
           <Routes>
             <Route path="/" element={<Navigate to="/projets-personnels" replace />} />
             <Route path="/projets-personnels" element={<PersonalProjects />} />
