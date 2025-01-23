@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Projets Professionnels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Projets Personnels</a></li>
+            <li><a href="professional.html" class="active">Projets Professionnels</a></li>
+            <li><a href="education.html">Formation</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="professional-projects" class="projects-section">
+            <h2>Projets Professionnels</h2>
+            <div class="search-container">
+                <input type="text" id="professional-search" placeholder="Rechercher un projet..." class="search-input">
+            </div>
+            <div id="professional-projects-grid" class="projects-grid"></div>
+        </section>
+    </main>
+
+    <script src="projects.js"></script>
+    <script src="professional.js"></script>
+</body>
+</html>
