@@ -1,13 +1,83 @@
+// Fonction pour créer un carrousel d'images
+function createImageCarousel(images) {
+    const carousel = document.createElement('div');
+    carousel.className = 'image-carousel';
+
+    const imagesContainer = document.createElement('div');
+    imagesContainer.className = 'carousel-images';
+    
+    images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Project image';
+        imagesContainer.appendChild(img);
+    });
+
+    const prevButton = document.createElement('button');
+    prevButton.className = 'carousel-button prev';
+    prevButton.innerHTML = '❮';
+
+    const nextButton = document.createElement('button');
+    nextButton.className = 'carousel-button next';
+    nextButton.innerHTML = '❯';
+
+    const dots = document.createElement('div');
+    dots.className = 'carousel-dots';
+    
+    images.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => goToSlide(index));
+        dots.appendChild(dot);
+    });
+
+    carousel.appendChild(imagesContainer);
+    if (images.length > 1) {
+        carousel.appendChild(prevButton);
+        carousel.appendChild(nextButton);
+        carousel.appendChild(dots);
+    }
+
+    let currentSlide = 0;
+
+    function updateDots() {
+        const allDots = dots.querySelectorAll('.carousel-dot');
+        allDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        imagesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % images.length;
+        goToSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + images.length) % images.length;
+        goToSlide(currentSlide);
+    }
+
+    if (images.length > 1) {
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+    }
+
+    return carousel;
+}
+
 // Fonction pour créer une carte de projet
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
 
-    const image = document.createElement('img');
-    image.src = project.images[0];
-    image.alt = project.title;
-    image.className = 'project-image';
-    card.appendChild(image);
+    const carousel = createImageCarousel(project.images);
+    card.appendChild(carousel);
 
     const info = document.createElement('div');
     info.className = 'project-info';
