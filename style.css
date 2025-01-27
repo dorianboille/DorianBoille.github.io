@@ -244,13 +244,22 @@ h2 {
 }
 
 .timeline-item {
-    margin-bottom: 2rem;
     position: relative;
     width: 50%;
     padding: 0 2rem;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: height 0.3s ease;
+    overflow: hidden; /* Empêche le débordement des contenus */
+}
+
+.timeline-item .details {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: #555;
+    font-size: 0.9rem;
 }
 
 .timeline-item:nth-child(odd) {
